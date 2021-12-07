@@ -434,6 +434,9 @@ E.g. Runner dies just before packing after collecting all items.
 - mark fleet_command as waiting at station
 - run `resume_flows` in CLI tool
 - check, that packing request was sent to EMANS
+------
+Alternatively:
+- scratch that multi_order using `amp-core-cli`. It will immediatelly send packing_request and all fleet events will be ignored. You need to clear runner job in fleet (using hard reinit) 
 
 ## Did we send `packing_request` to EMANS?
 - Check if ExternalCommand with type `pack` and multiorder_id exists 
